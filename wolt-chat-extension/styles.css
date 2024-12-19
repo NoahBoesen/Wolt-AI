@@ -1,0 +1,45 @@
+/* Button styles */
+#wolt-chat-circle {
+    z-index: 10000;
+    transition: background-color 0.3s;
+    border-radius: 100% !important;
+    background-color: #459BDA;
+    padding: 1.5rem !important;
+    width:6rem !important;
+    height: 6rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#wolt-chat-circle:hover {
+    background-color: #374151;
+
+}
+
+/* Add styles for the SVG inside the button */
+#wolt-chat-circle svg {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+/* Chat window styles */
+#wolt-chat-window {
+    position: fixed;
+    bottom: calc(6rem + 1.5rem);
+    right: 1rem;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Add Tailwind-like utility classes */
+.fixed { position: fixed; }
+.bottom-4 { bottom: 1rem; }
+.right-4 { right: 1rem; }
+/* Add other necessary utility classes */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+  

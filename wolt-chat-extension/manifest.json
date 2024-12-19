@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Wolt Chatbot Extension",
+    "version": "1.0",
+    "description": "Hjælper brugeren med at finde mad på wolt.com",
+    "icons": {
+        "48": "favicon.png"
+    },
+    "permissions": [
+        "activeTab",
+        "contextMenus",
+        "scripting",
+        "storage"
+    ],
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": "favicon.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.wolt.com/*"],
+            "js": ["content.js"],
+            "css": ["styles.css"]
+        }
+    ]
+}
